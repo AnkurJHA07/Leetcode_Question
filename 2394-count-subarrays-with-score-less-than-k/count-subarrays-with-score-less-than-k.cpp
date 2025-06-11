@@ -4,18 +4,19 @@ public:
         int n = nums.size();
         long long result = 0;
         long long sum = 0;
-
         int i = 0;
         int j = 0;
-        while(j < n){
+        while(j<n){
             sum += nums[j];
-
-        while(i <= j && sum * (j-i+1) >= k){
+        while(i <= j && sum * (j-i+1) >= k)
+        {
             sum -= nums[i];
             i++;
+
         }
-        result += (j-i+1);
+        result += (j-i+1); 
         j++;
+        
         }
         return result;
     }
